@@ -7,7 +7,7 @@ body {
   background-color: white;
   margin: 40px;
   font-family: "Raleway", sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 18.78px;
 }
 /*HEADER*/
@@ -16,6 +16,7 @@ h2 {
 }
 a {
   text-decoration: none;
+  color: black;
 }
 .container {
   display: flex;
@@ -32,9 +33,20 @@ header p {
 i {
   padding: 10px;
 }
+p > i {
+  font-style: normal;
+  font-family: Vector;
+  color: #0065fc;
+  border: 1px solid #d9d9d9;
+  border-radius: 50%;
+  width: 24px;
+  padding: 4px 10px 4px 10px;
+}
 /*LOGO*/
 .logo {
   margin-left: 0; /*pour bien mettre le logo à gauche*/
+  width: 61.09px;
+  height: 19px;
 }
 .logo img {
   width: 100px;
@@ -43,6 +55,11 @@ i {
 /*NAV*/
 nav {
   margin-right: 0; /*pour bien mettre la nav à droite*/
+  padding: 10px;
+  margin: 15px;
+}
+nav ul li {
+  margin-left: 4em;
 }
 
 /*FORM*/
@@ -52,34 +69,42 @@ form {
 form i {
   margin: -1px;
   padding: 15px;
-  background-color: #ffffff;
-  border-bottom-left-radius: 18px;
-  border-top-left-radius: 18px;
+  background-color: #f2f2f2;
+  border-radius: 15px 0px 0px 15px;
+  height: 49px;
 }
 
 input[type="text"] {
   margin: -5px;
-  padding: 15px;
-  border-color: white;
+  padding: 20px;
+  border: 2px solid #f2f2f2;
+  height: 49px;
 }
 input[type="submit"] {
   background-color: #0065fc;
   color: white;
+  font-weight: bold;
   padding: 15px;
-  padding-left: -20px;
-  border-bottom-right-radius: 18px;
-  border-top-right-radius: 18px;
-  border-color: white;
+  padding-left: -22px;
+  border-radius: 0px 15px 15px 0px;
+  border: 2px solid #f2f2f2;
+  height: 49px;
 }
-/*FILTRE*/
-.filtres .container {
-  justify-content: flex-start;
+/*FILTRES*/
+
+#filter {
+  border: none;
+  width: 5%;
 }
 .filtres li {
-  border: 1px solid black;
-  border-radius: 20px;
+  margin-right: 45px;
+  border: 2px solid #d9d9d9;
+  border-radius: 25px;
+  height: 50px;
   padding: 5px;
+  padding-right: 20px;
 }
+
 /*card en general*/
 .card {
   background-color: #ffffff;
@@ -89,15 +114,25 @@ input[type="submit"] {
 .card div {
   padding: 10px;
 }
-
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
 #container {
   display: flex;
   flex-direction: row;
 }
+.hebergements,
+#popular {
+  border-radius: 20px;
+  background-color: #f2f2f2;
+}
 /*HEBERGEMENT*/
 .hebergements {
-  background-color: aqua;
-  width: 70%;
+  width: 67%;
+  margin-right: 3%;
 }
 .hebergements .card {
   padding: 2px;
@@ -113,24 +148,19 @@ input[type="submit"] {
   border: 5px solid #ffffff;
   border-radius: 20px 20px 0px 0px;
 }
-
-ul .container {
-  justify-content: flex-end;
+div .rating {
+  padding: 0%;
+  color: #0065fc;
 }
-ul li {
-  padding: 20px;
+.presentation {
+  line-height: 1.5em;
 }
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+.card div {
+  padding: 0;
 }
-
 /*POPULAR*/
 
 #popular {
-  background-color: blueviolet;
   width: 30%;
 }
 #popular .card {
@@ -150,7 +180,6 @@ ul li {
 }
 /*ACTIVITES*/
 .activites {
-  background-color: blue;
   padding-bottom: 20px;
 }
 .activites .card {
@@ -160,16 +189,15 @@ ul li {
 .activites img {
   width: 302px;
   height: 444.51px;
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
+  border-radius: 20px 20px 0 0;
 }
 /*FOOTER*/
 footer {
-  background-color: white;
+  background-color: #f2f2f2;
 }
 
 footer li {
-  background-color: aqua;
+  background-color: #f2f2f2;
   text-align: left;
   padding-left: 0;
   display: block;
