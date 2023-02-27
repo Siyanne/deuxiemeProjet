@@ -1,34 +1,41 @@
 * {
   margin: 0 auto;
+  padding: 0%;
   box-sizing: border-box;
   max-width: 1440px;
 }
 body {
   background-color: white;
   margin: 40px;
+
   font-family: "Raleway", sans-serif;
   font-size: 17px;
   line-height: 18.78px;
 }
-/*HEADER*/
-h2 {
-  padding: 20px;
+i {
+  color: #0065fc;
 }
+h2 {
+  margin: 20px 0px 20px 0px;
+}
+/*HEADER*/
+
 a {
   text-decoration: none;
   color: black;
 }
-.container {
+
+ul {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
 }
 ul li {
   list-style-type: none;
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
 }
 header p {
-  padding: 10px;
+  margin: 15px 0px 15px;
 }
 i {
   padding: 10px;
@@ -41,6 +48,7 @@ p > i {
   border-radius: 50%;
   width: 24px;
   padding: 4px 10px 4px 10px;
+  margin: 0%;
 }
 /*LOGO*/
 .logo {
@@ -50,6 +58,9 @@ p > i {
 }
 .logo img {
   width: 100px;
+}
+.nav img:hover {
+  filter: drop-shadow(-1px 0px 1px purple);
 }
 
 /*NAV*/
@@ -61,10 +72,15 @@ nav {
 nav ul li {
   margin-left: 4em;
 }
+nav a:focus {
+  color: #0065fc;
+}
 
 /*FORM*/
 form {
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 0;
 }
 form i {
   margin: -1px;
@@ -94,10 +110,14 @@ input[type="submit"] {
 
 #filter {
   border: none;
-  width: 5%;
+  padding-left: 0;
+  margin: 0;
+  padding-top: 17px;
+}
+.filtres {
+  padding-left: 0;
 }
 .filtres li {
-  margin-right: 45px;
   border: 2px solid #d9d9d9;
   border-radius: 25px;
   height: 50px;
@@ -110,20 +130,15 @@ input[type="submit"] {
   background-color: #ffffff;
   border: 5px;
   border-radius: 20px;
+  box-shadow: 0px 3px 15px #d9d9d9;
 }
-.card div {
-  padding: 10px;
-}
+
 .container {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
   flex-wrap: wrap;
 }
-#container {
-  display: flex;
-  flex-direction: row;
-}
+
 .hebergements,
 #popular {
   border-radius: 20px;
@@ -163,6 +178,9 @@ div .rating {
 #popular {
   width: 30%;
 }
+#popular i {
+  margin-left: 15%;
+}
 #popular .card {
   margin: 30px;
   padding: 4px;
@@ -193,15 +211,15 @@ div .rating {
 }
 /*FOOTER*/
 footer {
+  padding: 50px;
   background-color: #f2f2f2;
+  display: flex;
+  flex-direction: row;
+  gap: 90px;
 }
-
-footer li {
-  background-color: #f2f2f2;
-  text-align: left;
-  padding-left: 0;
-  display: block;
-}
-footer .container {
-  justify-content: space-around;
+footer ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  padding: 0;
 }
