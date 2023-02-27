@@ -4,26 +4,23 @@
   max-width: 1440px;
 }
 body {
-  background-color: red;
+  background-color: white;
   margin: 40px;
   font-family: "Raleway", sans-serif;
   font-size: 16px;
   line-height: 18.78px;
 }
-.logo img {
-  position: absolute;
-  width: 61.09px;
-  height: 19px;
-  left: 0px;
-  top: 0px;
-
-  background: #0065fc;
-}
+/*HEADER*/
 h2 {
   padding: 20px;
 }
 a {
   text-decoration: none;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 ul li {
   list-style-type: none;
@@ -35,7 +32,20 @@ header p {
 i {
   padding: 10px;
 }
+/*LOGO*/
+.logo {
+  margin-left: 0; /*pour bien mettre le logo à gauche*/
+}
+.logo img {
+  width: 100px;
+}
 
+/*NAV*/
+nav {
+  margin-right: 0; /*pour bien mettre la nav à droite*/
+}
+
+/*FORM*/
 form {
   padding: 20px;
 }
@@ -61,9 +71,14 @@ input[type="submit"] {
   border-top-right-radius: 18px;
   border-color: white;
 }
-
+/*FILTRE*/
 .filtres .container {
   justify-content: flex-start;
+}
+.filtres li {
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 5px;
 }
 /*card en general*/
 .card {
@@ -79,6 +94,7 @@ input[type="submit"] {
   display: flex;
   flex-direction: row;
 }
+/*HEBERGEMENT*/
 .hebergements {
   background-color: aqua;
   width: 70%;
