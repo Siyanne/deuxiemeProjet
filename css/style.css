@@ -1,5 +1,5 @@
 * {
-  margin: auto;
+  margin: 0 auto;
   padding: 0%;
   box-sizing: border-box;
   max-width: 1440px;
@@ -176,6 +176,7 @@ div .rating {
 }
 .presentation {
   line-height: 1.5em;
+  padding: 10px;
 }
 .card div {
   padding: 0;
@@ -195,27 +196,32 @@ div .rating {
 .popular i {
   margin-left: 15%;
 }
-.popular .card {
-  margin: 30px;
-  padding: 4px;
-}
+
 .popular img {
-  width: 150px;
-  height: auto;
+  width: 137px;
+  height: 144px;
   border-radius: 20px 0px 0px 20px;
+  margin: 0%;
 }
 .conteneur .card {
   display: flex;
-  justify-content: row;
-  width: 80%;
+
+  flex-direction: row;
+
   height: 144px;
+  margin: 40px;
 }
 /*ACTIVITES*/
 
 .activites {
   margin-bottom: 40px;
   width: 100%;
-  background-color: #0065fc;
+}
+.activites .card:first-child {
+  margin-left: 0;
+}
+.activites .card:last-child {
+  margin-right: 0;
 }
 
 .activites img {
@@ -225,22 +231,22 @@ div .rating {
 }
 /*FOOTER*/
 footer {
-  padding: 40px;
+  padding: 40px 0px;
   margin: 0;
   background-color: #f2f2f2;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
-  justify-content: left;
 }
 footer h3 {
   line-height: 3em;
 }
 footer ul {
   display: block;
-  box-sizing: border-box;
 }
 footer a {
   margin: 12px 12px 12px 0px;
+}
+footer div:last-child {
+  margin-right: 300px;
 }
