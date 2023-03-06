@@ -17,6 +17,9 @@ i {
 h2 {
   line-height: 3em;
 }
+span {
+  font-weight: bold;
+}
 /*HEADER*/
 
 a {
@@ -30,7 +33,7 @@ ul li {
   flex-direction: row;
 }
 header p {
-  margin: 15px 0px 15px;
+  margin: 25px 0px 25px;
 }
 i {
   padding: 10px;
@@ -44,6 +47,9 @@ p > i {
   width: 100%;
   padding: 4px 10px 4px 10px;
 }
+header h2 {
+  line-height: 0;
+}
 /*LOGO*/
 .logo {
   margin-left: 0; /*pour bien mettre le logo à gauche*/
@@ -52,27 +58,34 @@ p > i {
 }
 .logo img {
   width: 100px;
+  margin-top: 30px;
 }
 .nav img:hover {
-  filter: drop-shadow(-1px 0px 1px purple);
+  filter: drop-shadow(0px 1px 1px #8a2be2);
 }
 
 /*NAV*/
+
 nav {
   margin-right: 0; /*pour bien mettre la nav à droite*/
   padding: 10px;
-  margin: 15px;
+  margin: 0px 15px 15px 0px;
 }
+
 nav ul {
   display: flex;
   flex-direction: row;
 }
-nav ul li {
-  margin-left: 4em;
+nav a {
+  border-top: 2px solid white;
+  padding: 40px;
 }
+
 nav a:hover {
   color: #0065fc;
-  border-top: 1px solid #0065fc;
+  border-top: 2px solid #0065fc;
+
+  /* border-top: 1px solid #0065fc;*/
 }
 
 /*FORM*/
@@ -99,7 +112,7 @@ input[type="submit"] {
   color: white;
   font-weight: bold;
   padding: 15px;
-  padding-left: -22px;
+  margin: 0;
   border-radius: 0px 15px 15px 0px;
   border: 2px solid #f2f2f2;
   height: 49px;
@@ -141,12 +154,16 @@ input[type="submit"] {
 .container h2 {
   margin-left: 40px;
 }
-
+.presentation p,
+i {
+  font-size: 14px;
+}
 .hebergements,
 .popular {
   border-radius: 20px;
   background-color: #f2f2f2;
 }
+
 /*HEBERGEMENT*/
 .hebergements {
   width: 67%;
@@ -154,8 +171,8 @@ input[type="submit"] {
 .hebergements .card {
   padding: 2px;
   justify-content: space-between;
-  width: 246px;
-  height: 199px;
+  min-width: 246px;
+  min-height: 199px;
   margin: 15px;
 }
 .housing-container {
@@ -165,34 +182,56 @@ input[type="submit"] {
   justify-content: center;
 }
 .hebergements img {
-  width: 100%;
-  height: 120px;
+  min-width: 100%;
+  max-height: 124px;
   border: 5px solid #ffffff;
   border-radius: 20px 20px 0px 0px;
 }
+.hebergements .presentation {
+  line-height: 23px;
+  margin-left: 10px;
+}
 div .rating {
-  padding: 0%;
-  color: #0065fc;
+  display: flex;
+  flex-direction: row;
 }
-.presentation {
-  line-height: 1.5em;
-  padding: 10px;
+div .rating i {
+  margin: 0%;
+  padding: 5px 0px 5px 0px;
 }
+.rating i:last-child {
+  color: #d9d9d9;
+}
+
 .card div {
   padding: 0;
 }
 .viewMore {
   color: black;
   font-weight: bold;
-  margin-left: 20px;
+  margin-left: 58px;
   line-height: 5em;
 }
 /*POPULAR*/
 
 .popular {
-  width: 30%;
+  max-width: 30%;
   margin-left: 3%;
 }
+.conteneur .card {
+  display: flex;
+  line-height: 30px;
+  flex-direction: row;
+  min-height: 144px;
+  margin: 40px;
+}
+.popular div {
+  padding: 4px;
+}
+.popular .presentation {
+  margin: 10px 10px 0px 10px;
+}
+
 .popular i {
   margin-left: 15%;
 }
@@ -203,19 +242,16 @@ div .rating {
   border-radius: 20px 0px 0px 20px;
   margin: 0%;
 }
-.conteneur .card {
-  display: flex;
 
-  flex-direction: row;
-
-  height: 144px;
-  margin: 40px;
-}
 /*ACTIVITES*/
 
 .activites {
-  margin-bottom: 40px;
+  margin: 40px 0px 60px 0px;
   width: 100%;
+}
+.activities .card h4 {
+  margin: 20px;
+  flex-wrap: wrap;
 }
 .activites .card:first-child {
   margin-left: 0;
@@ -225,7 +261,7 @@ div .rating {
 }
 
 .activites img {
-  width: 302px;
+  max-width: 302px;
   height: 445px;
   border-radius: 20px 20px 0 0;
 }
