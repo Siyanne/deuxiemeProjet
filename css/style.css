@@ -1,12 +1,14 @@
 * {
-  margin: 0 auto;
-  padding: 0%;
+  /* margin: 0 auto; */
+  outline: 1px solid red;
+  background-color: #f003;
   box-sizing: border-box;
-  max-width: 1440px;
 }
 body {
+  margin: 0 auto;
+  max-width: 1440px;
   background-color: white;
-  margin: 40px;
+  padding: 0px 40px;
   font-family: "Raleway", sans-serif;
   font-size: 1em;
   line-height: 18.78px;
@@ -47,41 +49,36 @@ p > i {
   width: 100%;
   padding: 4px 10px 4px 10px;
 }
-header h2 {
-  line-height: 0;
-}
+
 /*LOGO*/
 .logo {
-  margin-left: 0; /*pour bien mettre le logo à gauche*/
-  width: 61.09px;
-  height: 19px;
+  display: flex;
+
+  align-items: center;
 }
 .logo img {
   width: 100px;
-  margin-top: 30px;
 }
 .nav img:hover {
   filter: drop-shadow(0px 1px 1px #8a2be2);
 }
 
 /*NAV*/
-
-nav {
-  margin-right: 0; /*pour bien mettre la nav à droite*/
-  padding: 10px;
-  margin: 0px 15px 15px 0px;
-}
-
-nav ul {
+.header {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
-nav a {
+.header nav {
+  display: flex;
+}
+
+.header nav a {
   border-top: 2px solid white;
   padding: 40px;
 }
 
-nav a:hover {
+.header nav a:hover {
   color: #0065fc;
   border-top: 2px solid #0065fc;
 
@@ -90,15 +87,12 @@ nav a:hover {
 
 /*FORM*/
 form {
-  margin: 20px 0px 20px 0px;
-  padding-left: 0;
+  margin: 20px 0px;
 }
 form i {
-  margin: -1px;
-  padding: 15px;
+  padding: 17px;
   background-color: #f2f2f2;
   border-radius: 15px 0px 0px 15px;
-  height: 49px;
 }
 
 input[type="text"] {
@@ -110,32 +104,31 @@ input[type="text"] {
 input[type="submit"] {
   background-color: #0065fc;
   color: white;
-  font-weight: bold;
-  padding: 15px;
-  margin: 0;
   border-radius: 0px 15px 15px 0px;
   border: 2px solid #f2f2f2;
+  font-weight: bold;
+  padding: 15px;
   height: 49px;
 }
 /*FILTRES*/
 
-#filter {
+.filter {
   border: none;
-  padding-left: 0;
-  margin: 0;
-  padding-top: 17px;
+  display: flex;
+  gap: 50px;
 }
 .filtres {
   display: flex;
-  flex-direction: row;
-  max-width: 70%;
-  margin-left: 0;
+  align-items: center;
+  gap: 50px;
 }
-.filtres li {
+.filtres a {
   border: 2px solid #d9d9d9;
   border-radius: 25px;
-  height: 50px;
-  padding: 5px 15px 5px 5px;
+  padding: 8px;
+}
+.filter a:hover {
+  color: #0065fc;
 }
 
 /*card en general*/
@@ -147,16 +140,18 @@ input[type="submit"] {
 }
 
 .container {
+  gap: 30px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
-.container h2 {
-  margin-left: 40px;
-}
+
 .presentation p,
-i {
+.icone {
   font-size: 14px;
+}
+.presentation {
+  line-height: 1em;
 }
 .hebergements,
 .popular {
@@ -168,29 +163,27 @@ i {
 .hebergements {
   width: 67%;
 }
-.hebergements .card {
-  padding: 2px;
-  justify-content: space-between;
-  min-width: 246px;
-  min-height: 199px;
-  margin: 15px;
-}
 .housing-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  justify-content: space-evenly;
 }
+.hebergements .card {
+  padding: 2px;
+  min-width: 246px;
+  min-height: 199px;
+  display: flex;
+}
+
 .hebergements img {
   min-width: 100%;
   max-height: 124px;
   border: 5px solid #ffffff;
   border-radius: 20px 20px 0px 0px;
 }
-.hebergements .presentation {
-  line-height: 23px;
-  margin-left: 10px;
-}
+
 div .rating {
   display: flex;
   flex-direction: row;
@@ -216,7 +209,7 @@ div .rating i {
 
 .popular {
   max-width: 30%;
-  margin-left: 3%;
+  /* margin-left: 3%; */
 }
 .conteneur .card {
   display: flex;
@@ -224,16 +217,17 @@ div .rating i {
   flex-direction: row;
   min-height: 144px;
   margin: 40px;
-}
-.popular div {
   padding: 4px;
 }
+
 .popular .presentation {
   margin: 10px 10px 0px 10px;
 }
 
-.popular i {
-  margin-left: 15%;
+.popular h2 {
+  /* margin-left: 15%; */
+  display: flex;
+  justify-content: space-between;
 }
 
 .popular img {
@@ -267,22 +261,16 @@ div .rating i {
 }
 /*FOOTER*/
 footer {
-  padding: 40px 0px;
-  margin: 0;
   background-color: #f2f2f2;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-around;
+  line-height: 2em;
 }
-footer h3 {
-  line-height: 3em;
-}
-footer ul {
-  display: block;
-}
+
 footer a {
-  margin: 12px 12px 12px 0px;
-}
-footer div:last-child {
-  margin-right: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
