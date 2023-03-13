@@ -294,66 +294,78 @@ footer a {
   flex-direction: column;
   justify-content: flex-start;
 }
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+/*      MEDIA QUERIES       */
+@media screen and (max-width: 319px) {
   body {
-    padding: 0px 40px;
-    margin: 0;
+    padding: 0;
   }
-  .header {
-    flex-direction: row;
+  .container {
+    flex-direction: column-reverse;
+  }
+  .header--container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .header--container nav {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+  .buttonIcon {
+    display: inline-flex;
+  }
+  form {
+    display: flex;
+    justify-content: center;
+  }
+  .searchButton {
+    display: none;
+  }
+  .search {
+    max-width: 160px;
   }
   .filter,
   .filtres {
-    gap: 7px;
-  }
-  .filtres a {
-    min-width: 100px;
-  }
-  .container {
     flex-direction: column;
-  }
-  .hebergements {
-    width: 100%;
-  }
-  .hebergements .card {
-    max-width: 246px;
-    max-height: 199px;
-  }
-  .hebergements img {
-    max-width: 100%;
-    max-height: 124px;
+    align-items: flex-start;
   }
   .popular {
-    max-width: 100%;
+    min-width: 100%;
   }
   .popular img {
-    max-width: 100%;
-    max-height: 144px;
+    max-width: 40%;
   }
   .popular--container {
-    flex-direction: row;
-    flex-wrap: wrap;
+    align-items: center;
   }
   .popular--container .card {
-    width: 252px;
-    height: 144px;
-    font-size: 13px;
-    color: red;
+    max-width: 100%;
+
+    min-height: 160px;
   }
-  .popular .presentation h4,
-  .popular .presentation p {
-    margin: 7px 7px 7px 0px;
+  .popular .presentation {
+    line-height: 1em;
+  }
+  .activities--container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
   }
   .activites .card {
-    max-width: 182px;
-    max-height: 267px;
+    max-width: 240px;
+    max-height: 360px;
   }
   .activites img {
     max-width: 100%;
-    max-height: 211px;
+    max-height: 300px;
+    border-radius: 20px 20px 0 0;
   }
-  .activities--container {
-    gap: 20px;
+
+  .hebergements {
+    min-width: 100%;
+  }
+  footer {
+    flex-direction: column;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -370,6 +382,11 @@ footer a {
   }
   .header nav {
     justify-content: center;
+    width: 100%;
+    text-align: center;
+  }
+  .header nav a {
+    width: 100%;
   }
   .header nav a:hover {
     border-top: none;
@@ -406,13 +423,12 @@ footer a {
   .hebergements {
     width: 100%;
   }
-
   .popular {
     max-width: 100%;
   }
   .popular img {
-    max-width: 100%;
-    max-height: 144px;
+    max-width: 100px;
+    max-height: 100%;
   }
   .popular--container .card {
     max-width: 290px;
@@ -444,14 +460,91 @@ footer a {
     flex-direction: column;
   }
 }
-@media screen and (min-width: 1025px) and (max-width: 1304px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
+    padding: 0px 40px;
+    margin: 0;
+  }
+  .header {
+    flex-direction: row;
+  }
+  .filter,
+  .filtres {
+    gap: 7px;
+  }
+  .filtres a {
+    min-width: 100px;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .hebergements {
+    width: 100%;
+  }
+  .hebergements .card {
+    max-width: 246px;
+    max-height: 199px;
+  }
+  .hebergements img {
+    max-width: 100%;
+    max-height: 124px;
+  }
+  .popular {
+    max-width: 100%;
+  }
+  /*JE VAIS PEUT ETRE CHANGER LES TAILLES POUR QUE LE RESPONSIVE SOIT PLUS FLUIDE*/
+  .popular img {
+    max-width: 100%;
+    max-height: 144px;
+  }
+
+  .popular--container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .popular--container .card {
+    max-width: 252px;
+    min-height: 144px;
+    font-size: 13px;
+    color: red;
+    gap: 5px;
+  }
+  .popular .presentation h4,
+  .popular .presentation p {
+    margin: 7px 7px 7px 0px;
+  }
+  .activites .card {
+    max-width: 182px;
+    max-height: 267px;
+  }
+  .activites img {
+    max-width: 100%;
+    max-height: 211px;
+  }
+  .activities--container {
+    gap: 20px;
+  }
+}
+
+@media screen and (min-width: 1023px) and (max-width: 1304px) {
   .popular {
     min-width: 100%;
   }
+  .popular img {
+    max-width: 100%;
+    max-height: 144px;
+  }
   .popular--container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .popular--container .card {
+    width: 281px;
+    height: 144px;
+    font-size: 13px;
+    color: red;
   }
   .hebergements {
     min-width: 100%;
@@ -461,4 +554,13 @@ footer a {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
   }
+  .activites .card {
+    max-width: 200px;
+    max-height: 300px;
+  }
+  .activites img {
+    max-width: 100%;
+    max-height: 240px;
+  }
 }
+/*faire des media queries entre 993 et 1023*/
