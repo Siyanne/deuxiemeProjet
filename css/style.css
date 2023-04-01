@@ -1,5 +1,5 @@
 * {
-  /*outline: 1px solid red;
+  /* outline: 1px solid red;
   background-color: #f003;*/
   box-sizing: border-box;
 }
@@ -21,12 +21,12 @@ body {
 img {
   object-fit: cover;
 }
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   body {
     padding: 0;
   }
   .padding-everything-without-popular--footer {
-    padding: 20px;
+    padding: 0px 20px;
   }
 
   h2 {
@@ -50,7 +50,10 @@ a {
   color: black;
 }
 .intro {
-  margin-bottom: 0;
+  margin: 0;
+}
+.pseudo-titre-principal {
+  margin: 30px 0px 8px;
 }
 .information {
   display: flex;
@@ -59,7 +62,7 @@ a {
   gap: 10px;
 }
 .info-p {
-  margin: 20px 0px;
+  margin: 35px 0px;
 }
 .icone-info {
   font-size: 1.1em;
@@ -80,11 +83,7 @@ a {
 .logo img:hover {
   filter: drop-shadow(0px 1px 1px #8a2be2);
 }
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .logo {
-    padding: 30px;
-  }
-}
+
 /*NAV*/
 .header--container {
   display: flex;
@@ -93,16 +92,18 @@ a {
 }
 .menu {
   display: flex;
+  gap: 40px;
 }
 .menu a {
   border-top: 2px solid white;
-  padding: 40px;
+  padding: 14px;
 }
 .menu a:hover {
   color: #0065fc;
   border-top: 2px solid #0065fc;
 }
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
+  /*mettre du padding sur le text*/
   .header--container {
     flex-direction: column;
     align-items: center;
@@ -110,6 +111,7 @@ a {
   .menu {
     flex-direction: row;
     min-width: 100%;
+    gap: 0px;
   }
   .menu a {
     display: flex;
@@ -135,8 +137,7 @@ a {
 }
 .location-font {
   display: flex;
-  width: 49px;
-  height: 49px;
+  padding: 16px;
   justify-content: center;
   align-items: center;
   color: black;
@@ -147,6 +148,7 @@ a {
   border: 2px solid #f2f2f2;
   width: 220px;
   font-weight: bold;
+  padding: 14px;
 }
 .buttonIcon {
   display: none;
@@ -155,8 +157,8 @@ a {
   border-radius: 15px;
   border: 2px solid #f2f2f2;
   font-weight: bold;
-  width: 49px;
-  margin-left: -15px;
+  padding: 16px;
+  margin-left: -20px;
   align-items: center;
   justify-content: center;
 }
@@ -166,30 +168,34 @@ a {
   border-radius: 0px 15px 15px 0px;
   border: 2px solid #f2f2f2;
   font-weight: bold;
+  padding: 16px;
 }
 .search:focus {
   font-weight: bold;
 }
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .buttonIcon {
     display: flex;
   }
   .searchButton {
     display: none;
   }
+  .search {
+    flex-grow: 1;
+  }
 }
 /*FILTRES*/
 .filter {
   border: none;
   display: flex;
-  gap: 20px;
+  gap: 10px;
   align-items: baseline;
   font-weight: bold;
 }
 .filtres {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
 
   flex-grow: 1;
 }
@@ -203,12 +209,12 @@ a {
   padding: 10px;
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
 }
 .filter a:hover {
   background-color: #deebff;
 }
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .filter p {
     margin: 0;
   }
@@ -273,6 +279,7 @@ a {
 .viewMore {
   color: black;
   font-weight: bold;
+  flex-basis: 100%;
 }
 .icone {
   color: #0065fc;
@@ -280,8 +287,8 @@ a {
 }
 .housing-container {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
+  flex-grow: 1;
   gap: 30px;
 }
 .housing-container h2 {
@@ -291,26 +298,30 @@ a {
 .hebergements .card {
   flex-grow: 1;
   flex-basis: 30%;
-  flex-wrap: wrap;
 }
+
 .hebergements h4,
 .hebergements .presentation p {
-  margin: 2px;
+  margin: 0;
 }
 .hebergements .rating:last-of-type {
-  margin-top: 3px;
   margin-bottom: 6px;
 }
 .hebergements img {
   min-width: 100%;
-  max-height: 124px;
+  height: 124px;
   border: 5px solid #ffffff;
   border-radius: 20px 20px 0px 0px;
 }
 .hebergements .presentation {
-  padding: 0px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-grow: 1;
+  padding-left: 15px;
 }
-@media screen and (min-width: 320px) and (max-width: 767px) {
+
+@media screen and (max-width: 767px) {
   /*hebergements/popular*/
   .container {
     flex-direction: column-reverse;
@@ -340,12 +351,13 @@ a {
   }
 }
 @media screen and (min-width: 1025px) and (max-width: 1304px) {
-  .viewMore {
-    flex-basis: 100%;
-  }
   .hebergements img {
     max-width: 100%;
-    max-height: 124px;
+    height: 124px;
+  }
+  .hebergements .presentation {
+    flex-grow: 1;
+    flex-basis: 100%;
   }
 }
 /*RATING*/
@@ -409,7 +421,7 @@ a {
   margin-top: auto;
   margin-bottom: 5px;
 }
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .popular {
     border-radius: 0px;
     padding: 30px 20px;
@@ -481,8 +493,7 @@ a {
   gap: 30px;
 }
 .activites {
-  padding-top: 65px;
-  padding-bottom: 65px;
+  padding-bottom: 35px;
 }
 .activites h2 {
   flex-basis: 100%;
@@ -500,7 +511,7 @@ a {
 .activities--container .card h4 {
   padding-left: 19px;
 }
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .activities--container {
     flex-wrap: wrap;
     gap: 15px;
@@ -540,11 +551,17 @@ a {
   flex-direction: column;
   flex-basis: 33%;
 }
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .footer--container {
     flex-direction: column;
     padding: 30px;
     gap: 50px;
+  }
+  .footer--container h3 {
+    margin: 0%;
+  }
+  .footer {
+    gap: 15px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -554,84 +571,5 @@ a {
   }
   .footer--container {
     gap: 30px;
-  }
-}
-@media screen and (max-width: 319px) {
-  body {
-    padding: 0;
-  }
-  .padding-everything-without-popular--footer {
-    padding: 15px;
-  }
-  .logo {
-    justify-content: center;
-    padding: 10px;
-  }
-  .header {
-    flex-direction: column;
-    text-align: center;
-  }
-  .menu {
-    flex-direction: column;
-  }
-  .header--principal h2 {
-    line-height: 1em;
-  }
-  .searchButton {
-    display: none;
-  }
-  .buttonIcon {
-    display: flex;
-  }
-  .filter {
-    flex-direction: column;
-  }
-  .filtres a {
-    flex-basis: 100%;
-  }
-  .container {
-    flex-direction: column-reverse;
-  }
-  .hebergements,
-  .popular {
-    padding: 0;
-    border-radius: 0;
-  }
-  .hebergements {
-    background-color: #ffffff;
-  }
-  .housing-container {
-    gap: 10px;
-  }
-  .hebergements h2 {
-    line-height: 1em;
-  }
-  .container {
-    padding: 25px 0px;
-  }
-  .viewMore {
-    flex-basis: 100%;
-  }
-  .popular {
-    flex-basis: 100%;
-    padding: 15px;
-  }
-  .popular--container {
-    gap: 10px;
-  }
-  .flex--popular {
-    gap: 10px;
-  }
-  .activites {
-    padding: 0;
-  }
-  .activities--container {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .footer--container {
-    flex-direction: column;
-    padding: 15px;
-    gap: 50px;
   }
 }
