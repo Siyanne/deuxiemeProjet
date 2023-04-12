@@ -1,11 +1,9 @@
 * {
-  outline: 1px solid red;
-  background-color: #f003;
   box-sizing: border-box;
 }
 body {
   margin: 0 auto;
-  max-width: 1440px;
+  /*mettre object-position: 50% 65%; sur heb img si pas de max-width1440px*/
   padding: 0px 50px;
   background-color: white;
   font-family: "Raleway", sans-serif;
