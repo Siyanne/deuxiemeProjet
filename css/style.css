@@ -1,11 +1,13 @@
 * {
+  outline: 1px solid red;
+  background-color: #f003;
   box-sizing: border-box;
 }
 body {
   margin: 0 auto;
   max-width: 1440px;
-  background-color: white;
   padding: 0px 50px;
+  background-color: white;
   font-family: "Raleway", sans-serif;
   font-size: 1em;
   line-height: 18px;
@@ -109,8 +111,6 @@ a {
   font-weight: bold;
   padding: 16px;
   margin-left: -20px;
-  align-items: center;
-  justify-content: center;
 }
 .searchButton {
   background-color: #0065fc;
@@ -166,7 +166,6 @@ a {
 /*SIDE BY SIDE HOUSING/POPULAR*/
 .container {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   gap: 40px;
 }
@@ -177,8 +176,6 @@ a {
   flex-grow: 1;
 }
 .popular {
-  display: flex;
-  flex-direction: column;
   flex-basis: 30%;
 }
 .hebergements,
@@ -208,13 +205,14 @@ a {
 }
 .hebergements .card {
   display: flex;
+  flex-direction: column;
   flex-grow: 1;
   flex-basis: 30%;
   margin: 0;
 }
 .to-be-flex {
   display: flex;
-  flex-direction: column;
+  flex-basis: 30%;
   flex-grow: 1;
 }
 .spacer {
@@ -313,6 +311,7 @@ a {
 }
 .activities--container .card {
   display: flex;
+  flex-direction: column;
   flex-basis: 20%;
   flex-grow: 1;
   margin: 0;
@@ -322,8 +321,14 @@ a {
   height: 380px;
   border-radius: 20px 20px 0 0;
 }
+.to-be-flex-activities {
+  display: flex;
+  flex-grow: 1;
+  flex-basis: 20%;
+}
 .activities--container .card h3 {
   padding-left: 19px;
+  line-height: 1em;
 }
 
 .activities--container .card .presentation {
@@ -410,7 +415,6 @@ a {
   }
   .popular--container .card {
     height: 144px;
-    font-size: 13px;
     flex-grow: 1;
     flex-basis: 30%;
     gap: 10px;
@@ -426,7 +430,7 @@ a {
   }
   .popular .presentation h3,
   .popular .presentation p {
-    margin: 6px 5px 6px 0px;
+    margin: 5px 3px 1px 0px;
   }
   .activites img {
     max-height: 211px;
@@ -480,6 +484,8 @@ a {
   }
   .buttonIcon {
     display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .searchButton {
     display: none;
@@ -545,6 +551,7 @@ a {
     max-height: 144px;
   }
   .activities--container {
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 15px;
     padding: 10px;
