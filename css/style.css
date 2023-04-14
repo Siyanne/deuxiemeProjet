@@ -3,7 +3,7 @@
 }
 body {
   margin: 0 auto;
-  /*mettre object-position: 50% 65%; sur heb img si pas de max-width1440px*/
+  max-width: 1440px;
   padding: 0px 50px;
   background-color: white;
   font-family: "Raleway", sans-serif;
@@ -271,7 +271,6 @@ a {
 .popular--container .card {
   display: flex;
   flex-direction: row;
-
   height: 146px;
   gap: 15px;
   margin: 0;
