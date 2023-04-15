@@ -16,6 +16,16 @@ body {
 img {
   object-fit: cover;
 }
+h1,
+h2 {
+  font-size: 22px;
+}
+.presentation h3 {
+  font-size: 1em;
+}
+.presentation p {
+  font-size: 14px;
+}
 /*HEADER*/
 a {
   text-decoration: none;
@@ -152,9 +162,6 @@ a {
   border-radius: 20px;
   box-shadow: 0px 3px 15px #d9d9d9;
 }
-.presentation p {
-  font-size: 14px;
-}
 /*SIDE BY SIDE HOUSING/POPULAR*/
 .container {
   display: flex;
@@ -180,10 +187,6 @@ a {
   color: black;
   font-weight: bold;
   flex-basis: 100%;
-}
-.icone {
-  color: #0065fc;
-  font-size: 14px;
 }
 .housing-container {
   display: flex;
@@ -237,7 +240,8 @@ a {
 }
 .icone {
   padding: 5px 0px;
-  font-size: 12px;
+  font-size: 14px;
+  color: #0065fc;
 }
 .rating i:last-child {
   color: #d9d9d9;
@@ -245,7 +249,7 @@ a {
 /*POPULAR*/
 .courbe {
   color: #0065fc;
-  font-size: 16px;
+  font-size: 18px;
 }
 .popular {
   display: flex;
@@ -317,7 +321,8 @@ a {
   flex-basis: 20%;
 }
 .activities--container .card h3 {
-  padding-left: 19px;
+  padding: 20px 19px;
+  margin: 0px;
   line-height: 1em;
 }
 .activities--container .card .presentation {
@@ -408,12 +413,6 @@ a {
   .popular .presentation {
     width: 60%;
   }
-  .popular .presentation h3 {
-    font-size: 1em;
-  }
-  .popular .presentation p {
-    font-size: 13px;
-  }
   .popular .presentation h3,
   .popular .presentation p {
     margin: 5px 3px 1px 0px;
@@ -440,7 +439,6 @@ a {
     line-height: 1em;
   }
   h2 {
-    font-size: 22px;
     line-height: 1.2em;
   }
   .logo {
