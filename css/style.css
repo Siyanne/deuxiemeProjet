@@ -238,6 +238,12 @@ a {
   display: flex;
   flex-direction: row;
 }
+.hebergements .rating {
+  padding-bottom: 15px;
+}
+.popular .rating {
+  padding-bottom: 10px;
+}
 .icone {
   padding: 5px 0px;
   font-size: 14px;
