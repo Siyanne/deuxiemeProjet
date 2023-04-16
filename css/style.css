@@ -230,7 +230,7 @@ a {
   flex-direction: column;
   gap: 8px;
   flex-grow: 1;
-  padding-left: 15px;
+  padding: 0px 15px;
 }
 /*RATING*/
 .rating {
